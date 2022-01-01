@@ -222,6 +222,7 @@ namespace Calculator
             this.btnSqrt.TabIndex = 15;
             this.btnSqrt.Text = "√";
             this.btnSqrt.UseVisualStyleBackColor = true;
+            this.btnSqrt.Click += new System.EventHandler(this.btnSqrt_Click);
             // 
             // btnDel
             // 

@@ -155,14 +155,15 @@ namespace Calculator
 
         private void btnPercent_Click(object sender, EventArgs e)
         {
-            if(OprandOne != null)
+            if (OprandOne != null)
             {
 
-                decimal percent=0 , number;
+                decimal percent = 0, number;
                 try
                 {
                     number = Convert.ToDecimal(textBox.Text);
                     percent = (decimal)(OprandOne * (number / 100));
+                    OprandTwo = percent;
                 }
                 catch (Exception)
                 {
@@ -174,7 +175,7 @@ namespace Calculator
                     textBox.Clear();
                 }
             }
-            
+
         }
 
         private void ManageOprand(decimal number)
@@ -191,18 +192,26 @@ namespace Calculator
 
         private void btnEqule_Click(object sender, EventArgs e)
         {
-            decimal number;
-            try
+            if (OprandOne == null)
             {
-                number = Convert.ToDecimal(textBox.Text);
+                ClearAll();
+                return;
             }
-            catch (Exception)
+            if (OprandTwo == null)
             {
+                decimal number;
+                try
+                {
+                    number = Convert.ToDecimal(textBox.Text);
+                    ManageOprand(number);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
 
-                throw;
             }
 
-            ManageOprand(number);
             if (OprandOne != null && OprandTwo != null && Oprator != null)
             {
                 string history;
@@ -211,7 +220,7 @@ namespace Calculator
                     case Oprator.Division:
                         history = $"{OprandOne} ÷ {OprandTwo} =";
                         tbHistory.Text = history;
-                        textBox.Text = (OprandOne / OprandTwo).ToString();
+                        textBox.Text = ((decimal)OprandOne / (decimal)OprandTwo).ToString();
                         break;
 
                     case Oprator.Multi:
@@ -229,7 +238,7 @@ namespace Calculator
                     case Oprator.Sum:
                         history = $"{OprandOne} + {OprandTwo} =";
                         tbHistory.Text = history;
-                        textBox.Text = (OprandOne + OprandTwo).ToString();
+                        textBox.Text = ((decimal)OprandOne + (decimal)OprandTwo).ToString();
                         break;
 
                     case Oprator.Percent:
@@ -246,7 +255,7 @@ namespace Calculator
 
         private void btnSin_Click(object sender, EventArgs e)
         {
-            double number =0;
+            double number = 0;
             try
             {
                 number = Convert.ToDouble(textBox.Text);
@@ -265,10 +274,37 @@ namespace Calculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            ClearAll();
+        }
+
+
+        private void ClearAll()
+        {
             OprandOne = null;
             OprandTwo = null;
             tbHistory.Clear();
             textBox.Clear();
+        }
+
+        private void btnSqrt_Click(object sender, EventArgs e)
+        {
+
+            decimal number = 0;
+            try
+            {
+                number = Convert.ToDecimal(textBox.Text);
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                tbHistory.Text = $"√({number}) = {Math.Sqrt((double)number)}";
+                textBox.Clear();
+            }
+
         }
     }
 }
