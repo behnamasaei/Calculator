@@ -406,6 +406,8 @@ namespace Calculator
             this.tbHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbHistory.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbHistory.Location = new System.Drawing.Point(12, 21);
+            this.tbHistory.MaximumSize = new System.Drawing.Size(320, 23);
+            this.tbHistory.MinimumSize = new System.Drawing.Size(319, 22);
             this.tbHistory.Name = "tbHistory";
             this.tbHistory.Size = new System.Drawing.Size(319, 22);
             this.tbHistory.TabIndex = 32;
