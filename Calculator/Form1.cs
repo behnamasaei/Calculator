@@ -15,7 +15,17 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            textBox.Text = "asd";
         }
 
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
