@@ -178,6 +178,7 @@ namespace Calculator
             this.btnCos.TabIndex = 11;
             this.btnCos.Text = "Cos";
             this.btnCos.UseVisualStyleBackColor = true;
+            this.btnCos.Click += new System.EventHandler(this.btnCos_Click);
             // 
             // btnTan
             // 
@@ -189,6 +190,7 @@ namespace Calculator
             this.btnTan.TabIndex = 12;
             this.btnTan.Text = "Tan";
             this.btnTan.UseVisualStyleBackColor = true;
+            this.btnTan.Click += new System.EventHandler(this.btnTan_Click);
             // 
             // btnCot
             // 
@@ -200,6 +202,7 @@ namespace Calculator
             this.btnCot.TabIndex = 13;
             this.btnCot.Text = "Cot";
             this.btnCot.UseVisualStyleBackColor = true;
+            this.btnCot.Click += new System.EventHandler(this.btnCot_Click);
             // 
             // btnLog
             // 

@@ -325,5 +325,62 @@ namespace Calculator
                 textBox.Clear();
             }
         }
+
+        private void btnCos_Click(object sender, EventArgs e)
+        {
+            double number = 0;
+            try
+            {
+                number = Convert.ToDouble(textBox.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                tbHistory.Text = $"Cos({number}) = {Math.Cos(number).ToString()}";
+                textBox.Clear();
+            }
+        }
+
+        private void btnTan_Click(object sender, EventArgs e)
+        {
+            double number = 0;
+            try
+            {
+                number = Convert.ToDouble(textBox.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                tbHistory.Text = $"Tan({number}) = {Math.Tan(number).ToString()}";
+                textBox.Clear();
+            }
+        }
+
+        private void btnCot_Click(object sender, EventArgs e)
+        {
+            double number = 0;
+            try
+            {
+                number = Convert.ToDouble(textBox.Text);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                tbHistory.Text = $"Cot({number}) = {Math.Atan(1 / (number))}";
+                textBox.Clear();
+            }
+        }
     }
 }
