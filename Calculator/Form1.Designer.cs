@@ -211,6 +211,7 @@ namespace Calculator
             this.btnLog.TabIndex = 14;
             this.btnLog.Text = "∫";
             this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // btnSqrt
             // 

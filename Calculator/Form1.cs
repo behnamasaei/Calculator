@@ -306,5 +306,24 @@ namespace Calculator
             }
 
         }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            decimal number = 0;
+            try
+            {
+                number = Convert.ToDecimal(textBox.Text);
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                tbHistory.Text = $"log({number}) = {Math.Log10((double)number)}";
+                textBox.Clear();
+            }
+        }
     }
 }
