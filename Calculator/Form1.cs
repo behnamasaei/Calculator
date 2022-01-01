@@ -388,5 +388,10 @@ namespace Calculator
             string txtBox = textBox.Text;
             textBox.Text = txtBox.Remove(txtBox.Length-1);
         }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            textBox.AppendText(".");
+        }
     }
 }
