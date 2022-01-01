@@ -242,6 +242,7 @@ namespace Calculator
             this.btnDel.Size = new System.Drawing.Size(75, 45);
             this.btnDel.TabIndex = 18;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnDivision
             // 

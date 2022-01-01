@@ -382,5 +382,11 @@ namespace Calculator
                 textBox.Clear();
             }
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            string txtBox = textBox.Text;
+            textBox.Text = txtBox.Remove(txtBox.Length-1);
+        }
     }
 }
