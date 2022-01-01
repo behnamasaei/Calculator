@@ -30,7 +30,7 @@ namespace Calculator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPercent = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.btnCE = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -58,28 +58,28 @@ namespace Calculator
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnDot = new System.Windows.Forms.Button();
             this.btnEqule = new System.Windows.Forms.Button();
-            this.lblHistory = new System.Windows.Forms.Label();
+            this.tbHistory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPercent
             // 
-            this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "%";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPercent.AutoSize = true;
+            this.btnPercent.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPercent.Location = new System.Drawing.Point(12, 100);
+            this.btnPercent.Name = "btnPercent";
+            this.btnPercent.Size = new System.Drawing.Size(75, 45);
+            this.btnPercent.TabIndex = 0;
+            this.btnPercent.Text = "%";
+            this.btnPercent.UseVisualStyleBackColor = true;
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
             // 
             // textBox
             // 
-            this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox.Location = new System.Drawing.Point(12, 57);
+            this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox.Location = new System.Drawing.Point(12, 49);
             this.textBox.Name = "textBox";
-            this.textBox.ReadOnly = true;
-            this.textBox.Size = new System.Drawing.Size(318, 35);
+            this.textBox.Size = new System.Drawing.Size(318, 36);
             this.textBox.TabIndex = 2;
             this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -107,6 +107,7 @@ namespace Calculator
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSin
             // 
@@ -118,6 +119,7 @@ namespace Calculator
             this.btnSin.TabIndex = 6;
             this.btnSin.Text = "Sin";
             this.btnSin.UseVisualStyleBackColor = true;
+            this.btnSin.Click += new System.EventHandler(this.btnSin_Click);
             // 
             // btnSeven
             // 
@@ -129,6 +131,7 @@ namespace Calculator
             this.btnSeven.TabIndex = 7;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
+            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
             // 
             // btnFour
             // 
@@ -140,6 +143,7 @@ namespace Calculator
             this.btnFour.TabIndex = 8;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
+            this.btnFour.Click += new System.EventHandler(this.btnFour_Click);
             // 
             // btnOne
             // 
@@ -151,6 +155,7 @@ namespace Calculator
             this.btnOne.TabIndex = 9;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
             // btnMinesPlus
             // 
@@ -243,6 +248,7 @@ namespace Calculator
             this.btnDivision.TabIndex = 19;
             this.btnDivision.Text = "÷";
             this.btnDivision.UseVisualStyleBackColor = true;
+            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
             // 
             // btnMulti
             // 
@@ -254,6 +260,7 @@ namespace Calculator
             this.btnMulti.TabIndex = 20;
             this.btnMulti.Text = "×";
             this.btnMulti.UseVisualStyleBackColor = true;
+            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
             // btnEghit
             // 
@@ -265,6 +272,7 @@ namespace Calculator
             this.btnEghit.TabIndex = 21;
             this.btnEghit.Text = "8";
             this.btnEghit.UseVisualStyleBackColor = true;
+            this.btnEghit.Click += new System.EventHandler(this.btnEghit_Click);
             // 
             // btnNine
             // 
@@ -276,6 +284,7 @@ namespace Calculator
             this.btnNine.TabIndex = 22;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
+            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
             // btnFive
             // 
@@ -287,6 +296,7 @@ namespace Calculator
             this.btnFive.TabIndex = 23;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
+            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
             // 
             // btnSix
             // 
@@ -298,6 +308,7 @@ namespace Calculator
             this.btnSix.TabIndex = 24;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
+            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
             // 
             // btnMines
             // 
@@ -309,6 +320,7 @@ namespace Calculator
             this.btnMines.TabIndex = 25;
             this.btnMines.Text = "-";
             this.btnMines.UseVisualStyleBackColor = true;
+            this.btnMines.Click += new System.EventHandler(this.btnMines_Click);
             // 
             // btnTwo
             // 
@@ -320,6 +332,7 @@ namespace Calculator
             this.btnTwo.TabIndex = 26;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
+            this.btnTwo.Click += new System.EventHandler(this.btnTwo_Click);
             // 
             // btnZero
             // 
@@ -331,6 +344,7 @@ namespace Calculator
             this.btnZero.TabIndex = 27;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
             // 
             // btnThree
             // 
@@ -342,6 +356,7 @@ namespace Calculator
             this.btnThree.TabIndex = 28;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
+            this.btnThree.Click += new System.EventHandler(this.btnThree_Click);
             // 
             // btnPlus
             // 
@@ -353,6 +368,7 @@ namespace Calculator
             this.btnPlus.TabIndex = 29;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // btnDot
             // 
@@ -375,23 +391,26 @@ namespace Calculator
             this.btnEqule.TabIndex = 31;
             this.btnEqule.Text = "=";
             this.btnEqule.UseVisualStyleBackColor = true;
+            this.btnEqule.Click += new System.EventHandler(this.btnEqule_Click);
             // 
-            // lblHistory
+            // tbHistory
             // 
-            this.lblHistory.AutoSize = true;
-            this.lblHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHistory.Location = new System.Drawing.Point(312, 19);
-            this.lblHistory.Name = "lblHistory";
-            this.lblHistory.Size = new System.Drawing.Size(12, 20);
-            this.lblHistory.TabIndex = 32;
-            this.lblHistory.Text = ".";
+            this.tbHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbHistory.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbHistory.Location = new System.Drawing.Point(12, 21);
+            this.tbHistory.Name = "tbHistory";
+            this.tbHistory.Size = new System.Drawing.Size(319, 22);
+            this.tbHistory.TabIndex = 32;
+            this.tbHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(341, 411);
-            this.Controls.Add(this.lblHistory);
+            this.Controls.Add(this.tbHistory);
             this.Controls.Add(this.btnEqule);
             this.Controls.Add(this.btnDot);
             this.Controls.Add(this.btnPlus);
@@ -419,14 +438,14 @@ namespace Calculator
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.textBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPercent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +453,7 @@ namespace Calculator
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPercent;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.Button btnClear;
@@ -462,7 +481,8 @@ namespace Calculator
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btnDot;
         private System.Windows.Forms.Button btnEqule;
-        private System.Windows.Forms.Label lblHistory;
+        private System.Windows.Forms.TextBox tbHistory;
+        private System.Windows.Forms.TextBox textBoxHistory;
     }
 }
 
